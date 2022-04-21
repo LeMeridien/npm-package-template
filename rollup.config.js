@@ -3,9 +3,12 @@ import babel from "rollup-plugin-babel";
 import typescript from "rollup-plugin-typescript2";
 import { terser } from "rollup-plugin-terser";
 
+const extensions = [".ts"];
+const noDeclarationFiles = { compilerOptions: { declaration: false } };
+
 export default [
     {
-        input: "src/index.js",
+        input: "src/index.ts",
         output: {
             file: "es/index.es.js",
             format: "esm",
@@ -13,12 +16,12 @@ export default [
         plugins: [
             typescript({ tsconfigOverride: noDeclarationFiles }),
             babel({
-                exclude: "node_modules/**",
+                extensions,
             }),
         ],
     },
     {
-        input: "src/index.js",
+        input: "src/index.ts",
         output: {
             file: "es/index.es.min.js",
             format: "esm",
@@ -27,6 +30,7 @@ export default [
         plugins: [
             typescript({ tsconfigOverride: noDeclarationFiles }),
             babel({
+                extensions,
                 exclude: "node_modules/**",
             }),
             terser({
@@ -39,7 +43,7 @@ export default [
         ],
     },
     {
-        input: "src/index.js",
+        input: "src/index.ts",
         output: {
             file: "dist/index.js",
             name: "Index",
@@ -48,12 +52,13 @@ export default [
         plugins: [
             typescript({ tsconfigOverride: noDeclarationFiles }),
             babel({
+                extensions,
                 exclude: "node_modules/**",
             }),
         ],
     },
     {
-        input: "src/index.js",
+        input: "src/index.ts",
         output: {
             file: "dist/index.min.js",
             name: "index",
@@ -64,6 +69,7 @@ export default [
         plugins: [
             typescript({ tsconfigOverride: noDeclarationFiles }),
             babel({
+                extensions,
                 exclude: "node_modules/**",
             }),
             terser({
@@ -76,31 +82,35 @@ export default [
         ],
     },
     {
-        input: "src/index.js",
+        input: "src/index.ts",
         output: {
             file: "./lib/index.js",
             format: "cjs",
             sourcemap: true,
         },
         plugins: [
-            resolve(),
+            resolve({
+                extensions,
+            }),
             typescript({ useTsconfigDeclarationDir: true }),
             babel({
-                exclude: "node_modules/**",
+                extensions,
             }),
         ],
     },
     {
-        input: "src/index.js",
+        input: "src/index.ts",
         output: {
             file: "./lib/index.min.js",
             format: "cjs",
         },
         plugins: [
-            resolve(),
+            resolve({
+                extensions,
+            }),
             typescript({ useTsconfigDeclarationDir: true }),
             babel({
-                exclude: "node_modules/**",
+                extensions,
             }),
             terser({
                 compress: {
