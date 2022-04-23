@@ -54,5 +54,8 @@
   "dependencies": {
     "core-js": "^3.22.1"
   },
+  "peerDependencies": {
+    "react": "^18"
+  },
   "sideEffects": false
 }
