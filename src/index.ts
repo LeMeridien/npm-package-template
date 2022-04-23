@@ -1,5 +1,5 @@
-import { Hello } from "./hello";
+import Hello from './hello';
 
-export function HelloWorld() {
-    console.log(Hello);
+export default function HelloWorld() {
+	console.log(Hello);
 }

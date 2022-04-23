@@ -1,1 +1,3 @@
-export const Hello = 'Hello, Npm World~';
+const Hello = 'Hello, Npm World~';
+
+export default Hello;
