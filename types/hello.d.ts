@@ -1,1 +1,1 @@
-export declare const Hello = "Hello, Npm World~";
+export declare const Hello = 'Hello, Npm World~';

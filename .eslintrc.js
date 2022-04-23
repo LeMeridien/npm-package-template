@@ -1,15 +1,18 @@
 module.exports = {
 	env: {
 		browser: true,
-		es2021: true
+		es2021: true,
+		node: true
 	},
 	extends: [
-		'airbnb',
-		'airbnb/hooks',
-		// 'eslint:recommended',
-		'plugin:import/typescript'
-		// 'plugin:react/recommended',
-		// 'plugin:@typescript-eslint/recommended'
+		// 'airbnb',
+		// 'airbnb/hooks',
+		// 'airbnb-typescript',
+		'eslint:recommended',
+		'plugin:react/recommended',
+		'plugin:import/typescript',
+		'plugin:@typescript-eslint/recommended',
+		'plugin:@typescript-eslint/recommended-requiring-type-checking'
 	],
 	parser: '@typescript-eslint/parser',
 	parserOptions: {
@@ -17,7 +20,9 @@ module.exports = {
 			jsx: true
 		},
 		ecmaVersion: 'latest',
-		sourceType: 'module'
+		sourceType: 'module',
+		project: './tsconfig.eslint.json'
+		// project: './tsconfig.json'
 	},
 	plugins: ['react', '@typescript-eslint'],
 	rules: {
@@ -27,6 +32,8 @@ module.exports = {
 		'comma-dangle': ['error', 'never'],
 		'linebreak-style': ['error', 'unix'],
 		'import/extensions': 0,
+		'import/prefer-default-export': 0,
+		'@typescript-eslint/no-unsafe-call': 0,
 		'no-tabs': ['error', { allowIndentationTabs: true }]
 	}
 };
