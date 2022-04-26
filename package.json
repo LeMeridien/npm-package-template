@@ -1,61 +1,62 @@
 {
-  "name": "npm-package-template",
-  "version": "0.0.1",
-  "description": "npm-package-template",
-  "main": "lib/index.js",
-  "unpkg": "dist/index.js",
-  "module": "es/index.js",
-  "types": "types/index.d.ts",
-  "files": [
-    "dist",
-    "lib",
-    "es",
-    "src",
-    "types"
-  ],
-  "directories": {
-    "lib": "lib"
-  },
-  "scripts": {
-    "build": "rollup --config",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "eslint:lint": "eslint --ext .js,.jsx,.ts,.tsx src --color",
-    "eslint:fix": "eslint --fix --ext .js,.jsx,.ts,.tsx src --color"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/LeMeridien/npm-package-template.git"
-  },
-  "author": "browserify@qq.com",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/LeMeridien/npm-package-template/issues"
-  },
-  "homepage": "https://github.com/LeMeridien/npm-package-template#readme",
-  "devDependencies": {
-    "@babel/core": "^7.17.9",
-    "@babel/preset-env": "^7.16.11",
-    "@rollup/plugin-babel": "^5.3.1",
-    "@typescript-eslint/eslint-plugin": "^5.20.0",
-    "@typescript-eslint/parser": "^5.20.0",
-    "eslint": "^8.14.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-react": "^7.29.4",
-    "eslint-plugin-react-hooks": "^4.4.0",
-    "rollup": "^2.70.2",
-    "rollup-plugin-babel": "^4.4.0",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-terser": "^7.0.2",
-    "rollup-plugin-typescript2": "^0.31.2",
-    "typescript": "^4.6.3"
-  },
-  "dependencies": {
-    "core-js": "^3.22.1"
-  },
-  "peerDependencies": {
-    "react": "^18"
-  },
-  "sideEffects": false
+	"name": "@cru/npm-package-template",
+	"version": "0.0.1",
+	"description": "npm-package-template",
+	"main": "lib/index.js",
+	"unpkg": "dist/index.js",
+	"module": "es/index.js",
+	"types": "types/index.d.ts",
+	"files": [
+		"dist",
+		"lib",
+		"es",
+		"src",
+		"types"
+	],
+	"directories": {
+		"lib": "lib"
+	},
+	"scripts": {
+		"build": "rollup --config",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"eslint:lint": "eslint --ext .js,.jsx,.ts,.tsx src --color",
+		"eslint:fix": "eslint --fix --ext .js,.jsx,.ts,.tsx src --color",
+		"publish": "npm publish"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/LeMeridien/npm-package-template.git"
+	},
+	"author": "browserify@qq.com",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/LeMeridien/npm-package-template/issues"
+	},
+	"homepage": "https://github.com/LeMeridien/npm-package-template#readme",
+	"devDependencies": {
+		"@babel/core": "^7.17.9",
+		"@babel/preset-env": "^7.16.11",
+		"@rollup/plugin-babel": "^5.3.1",
+		"@typescript-eslint/eslint-plugin": "^5.20.0",
+		"@typescript-eslint/parser": "^5.20.0",
+		"eslint": "^8.14.0",
+		"eslint-config-airbnb": "^19.0.4",
+		"eslint-plugin-import": "^2.26.0",
+		"eslint-plugin-jsx-a11y": "^6.5.1",
+		"eslint-plugin-react": "^7.29.4",
+		"eslint-plugin-react-hooks": "^4.4.0",
+		"rollup": "^2.70.2",
+		"rollup-plugin-babel": "^4.4.0",
+		"rollup-plugin-node-resolve": "^5.2.0",
+		"rollup-plugin-terser": "^7.0.2",
+		"rollup-plugin-typescript2": "^0.31.2",
+		"typescript": "^4.6.3"
+	},
+	"dependencies": {
+		"core-js": "^3.22.1"
+	},
+	"peerDependencies": {
+		"react": "^18"
+	},
+	"sideEffects": false
 }
